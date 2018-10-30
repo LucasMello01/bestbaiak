@@ -1,0 +1,273 @@
+# Project: TheForgottenServer
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = Obj/TheForgottenServer_private.res
+OBJ  = Obj/actions.o Obj/admin.o Obj/allocator.o Obj/baseevents.o Obj/beds.o Obj/chat.o Obj/combat.o Obj/condition.o Obj/configmanager.o Obj/connection.o Obj/container.o Obj/creature.o Obj/creatureevent.o Obj/cylinder.o Obj/database.o Obj/databasemanager.o Obj/databasemysql.o Obj/databasemysqlpp.o Obj/databasepgsql.o Obj/databasesqlite.o Obj/depot.o Obj/dispatcher.o Obj/exception.o Obj/fileloader.o Obj/game.o Obj/gameservers.o Obj/globalevent.o Obj/group.o Obj/gui.o Obj/house.o Obj/housetile.o Obj/inputbox.o Obj/ioban.o Obj/ioguild.o Obj/iologindata.o Obj/iomap.o Obj/iomapserialize.o Obj/item.o Obj/itemattributes.o Obj/items.o Obj/luascript.o Obj/mailbox.o Obj/manager.o Obj/map.o Obj/monster.o Obj/monsters.o Obj/movement.o Obj/networkmessage.o Obj/npc.o Obj/otpch.o Obj/otserv.o Obj/outfit.o Obj/outputmessage.o Obj/party.o Obj/player.o Obj/playerbox.o Obj/position.o Obj/protocol.o Obj/protocolgame.o Obj/protocolhttp.o Obj/protocollogin.o Obj/protocolold.o Obj/quests.o Obj/raids.o Obj/scheduler.o Obj/scriptmanager.o Obj/server.o Obj/spawn.o Obj/spectators.o Obj/spells.o Obj/status.o Obj/talkaction.o Obj/teleport.o Obj/textlogger.o Obj/thing.o Obj/tile.o Obj/tools.o Obj/trashholder.o Obj/vocation.o Obj/waitlist.o Obj/weapons.o $(RES)
+LINKOBJ  = Obj/actions.o Obj/admin.o Obj/allocator.o Obj/baseevents.o Obj/beds.o Obj/chat.o Obj/combat.o Obj/condition.o Obj/configmanager.o Obj/connection.o Obj/container.o Obj/creature.o Obj/creatureevent.o Obj/cylinder.o Obj/database.o Obj/databasemanager.o Obj/databasemysql.o Obj/databasemysqlpp.o Obj/databasepgsql.o Obj/databasesqlite.o Obj/depot.o Obj/dispatcher.o Obj/exception.o Obj/fileloader.o Obj/game.o Obj/gameservers.o Obj/globalevent.o Obj/group.o Obj/gui.o Obj/house.o Obj/housetile.o Obj/inputbox.o Obj/ioban.o Obj/ioguild.o Obj/iologindata.o Obj/iomap.o Obj/iomapserialize.o Obj/item.o Obj/itemattributes.o Obj/items.o Obj/luascript.o Obj/mailbox.o Obj/manager.o Obj/map.o Obj/monster.o Obj/monsters.o Obj/movement.o Obj/networkmessage.o Obj/npc.o Obj/otpch.o Obj/otserv.o Obj/outfit.o Obj/outputmessage.o Obj/party.o Obj/player.o Obj/playerbox.o Obj/position.o Obj/protocol.o Obj/protocolgame.o Obj/protocolhttp.o Obj/protocollogin.o Obj/protocolold.o Obj/quests.o Obj/raids.o Obj/scheduler.o Obj/scriptmanager.o Obj/server.o Obj/spawn.o Obj/spectators.o Obj/spells.o Obj/status.o Obj/talkaction.o Obj/teleport.o Obj/textlogger.o Obj/thing.o Obj/tile.o Obj/tools.o Obj/trashholder.o Obj/vocation.o Obj/waitlist.o Obj/weapons.o $(RES)
+LIBS =  -L"lib" -mwindows -lboost_filesystem -lboost_thread -lboost_system -lboost_regex -lsqlite3 -lwsock32 -llua5.1 -lws2_32 -leay32 -lmysql -lxml2 -lgmp -lz -s  
+INCS =  -I"include" 
+CXXINCS =  -I"include" 
+BIN  = TheForgottenServer.exe
+CXXFLAGS = $(CXXINCS) -D__ENABLE_SERVER_DIAGNOSTIC__ -D__ROOT_PERMISSION__ -D__GROUND_CACHE__ -D__USE_SQLITE__ -D__USE_MYSQL__ -D__CONSOLE__ -D__WAR_SYSTEM__   -fexpensive-optimizations -O1
+CFLAGS = $(INCS)   -fexpensive-optimizations -O1
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before TheForgottenServer.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "TheForgottenServer.exe" $(LIBS)
+
+Obj/actions.o: ../actions.cpp
+	$(CPP) -c ../actions.cpp -o Obj/actions.o $(CXXFLAGS)
+
+Obj/admin.o: ../admin.cpp
+	$(CPP) -c ../admin.cpp -o Obj/admin.o $(CXXFLAGS)
+
+Obj/allocator.o: ../allocator.cpp
+	$(CPP) -c ../allocator.cpp -o Obj/allocator.o $(CXXFLAGS)
+
+Obj/baseevents.o: ../baseevents.cpp
+	$(CPP) -c ../baseevents.cpp -o Obj/baseevents.o $(CXXFLAGS)
+
+Obj/beds.o: ../beds.cpp
+	$(CPP) -c ../beds.cpp -o Obj/beds.o $(CXXFLAGS)
+
+Obj/chat.o: ../chat.cpp
+	$(CPP) -c ../chat.cpp -o Obj/chat.o $(CXXFLAGS)
+
+Obj/combat.o: ../combat.cpp
+	$(CPP) -c ../combat.cpp -o Obj/combat.o $(CXXFLAGS)
+
+Obj/condition.o: ../condition.cpp
+	$(CPP) -c ../condition.cpp -o Obj/condition.o $(CXXFLAGS)
+
+Obj/configmanager.o: ../configmanager.cpp
+	$(CPP) -c ../configmanager.cpp -o Obj/configmanager.o $(CXXFLAGS)
+
+Obj/connection.o: ../connection.cpp
+	$(CPP) -c ../connection.cpp -o Obj/connection.o $(CXXFLAGS)
+
+Obj/container.o: ../container.cpp
+	$(CPP) -c ../container.cpp -o Obj/container.o $(CXXFLAGS)
+
+Obj/creature.o: ../creature.cpp
+	$(CPP) -c ../creature.cpp -o Obj/creature.o $(CXXFLAGS)
+
+Obj/creatureevent.o: ../creatureevent.cpp
+	$(CPP) -c ../creatureevent.cpp -o Obj/creatureevent.o $(CXXFLAGS)
+
+Obj/cylinder.o: ../cylinder.cpp
+	$(CPP) -c ../cylinder.cpp -o Obj/cylinder.o $(CXXFLAGS)
+
+Obj/database.o: ../database.cpp
+	$(CPP) -c ../database.cpp -o Obj/database.o $(CXXFLAGS)
+
+Obj/databasemanager.o: ../databasemanager.cpp
+	$(CPP) -c ../databasemanager.cpp -o Obj/databasemanager.o $(CXXFLAGS)
+
+Obj/databasemysql.o: ../databasemysql.cpp
+	$(CPP) -c ../databasemysql.cpp -o Obj/databasemysql.o $(CXXFLAGS)
+
+Obj/databasemysqlpp.o: ../databasemysqlpp.cpp
+	$(CPP) -c ../databasemysqlpp.cpp -o Obj/databasemysqlpp.o $(CXXFLAGS)
+
+Obj/databasepgsql.o: ../databasepgsql.cpp
+	$(CPP) -c ../databasepgsql.cpp -o Obj/databasepgsql.o $(CXXFLAGS)
+
+Obj/databasesqlite.o: ../databasesqlite.cpp
+	$(CPP) -c ../databasesqlite.cpp -o Obj/databasesqlite.o $(CXXFLAGS)
+
+Obj/depot.o: ../depot.cpp
+	$(CPP) -c ../depot.cpp -o Obj/depot.o $(CXXFLAGS)
+
+Obj/dispatcher.o: ../dispatcher.cpp
+	$(CPP) -c ../dispatcher.cpp -o Obj/dispatcher.o $(CXXFLAGS)
+
+Obj/exception.o: ../exception.cpp
+	$(CPP) -c ../exception.cpp -o Obj/exception.o $(CXXFLAGS)
+
+Obj/fileloader.o: ../fileloader.cpp
+	$(CPP) -c ../fileloader.cpp -o Obj/fileloader.o $(CXXFLAGS)
+
+Obj/game.o: ../game.cpp
+	$(CPP) -c ../game.cpp -o Obj/game.o $(CXXFLAGS)
+
+Obj/gameservers.o: ../gameservers.cpp
+	$(CPP) -c ../gameservers.cpp -o Obj/gameservers.o $(CXXFLAGS)
+
+Obj/globalevent.o: ../globalevent.cpp
+	$(CPP) -c ../globalevent.cpp -o Obj/globalevent.o $(CXXFLAGS)
+
+Obj/group.o: ../group.cpp
+	$(CPP) -c ../group.cpp -o Obj/group.o $(CXXFLAGS)
+
+Obj/gui.o: ../gui.cpp
+	$(CPP) -c ../gui.cpp -o Obj/gui.o $(CXXFLAGS)
+
+Obj/house.o: ../house.cpp
+	$(CPP) -c ../house.cpp -o Obj/house.o $(CXXFLAGS)
+
+Obj/housetile.o: ../housetile.cpp
+	$(CPP) -c ../housetile.cpp -o Obj/housetile.o $(CXXFLAGS)
+
+Obj/inputbox.o: ../inputbox.cpp
+	$(CPP) -c ../inputbox.cpp -o Obj/inputbox.o $(CXXFLAGS)
+
+Obj/ioban.o: ../ioban.cpp
+	$(CPP) -c ../ioban.cpp -o Obj/ioban.o $(CXXFLAGS)
+
+Obj/ioguild.o: ../ioguild.cpp
+	$(CPP) -c ../ioguild.cpp -o Obj/ioguild.o $(CXXFLAGS)
+
+Obj/iologindata.o: ../iologindata.cpp
+	$(CPP) -c ../iologindata.cpp -o Obj/iologindata.o $(CXXFLAGS)
+
+Obj/iomap.o: ../iomap.cpp
+	$(CPP) -c ../iomap.cpp -o Obj/iomap.o $(CXXFLAGS)
+
+Obj/iomapserialize.o: ../iomapserialize.cpp
+	$(CPP) -c ../iomapserialize.cpp -o Obj/iomapserialize.o $(CXXFLAGS)
+
+Obj/item.o: ../item.cpp
+	$(CPP) -c ../item.cpp -o Obj/item.o $(CXXFLAGS)
+
+Obj/itemattributes.o: ../itemattributes.cpp
+	$(CPP) -c ../itemattributes.cpp -o Obj/itemattributes.o $(CXXFLAGS)
+
+Obj/items.o: ../items.cpp
+	$(CPP) -c ../items.cpp -o Obj/items.o $(CXXFLAGS)
+
+Obj/luascript.o: ../luascript.cpp
+	$(CPP) -c ../luascript.cpp -o Obj/luascript.o $(CXXFLAGS)
+
+Obj/mailbox.o: ../mailbox.cpp
+	$(CPP) -c ../mailbox.cpp -o Obj/mailbox.o $(CXXFLAGS)
+
+Obj/manager.o: ../manager.cpp
+	$(CPP) -c ../manager.cpp -o Obj/manager.o $(CXXFLAGS)
+
+Obj/map.o: ../map.cpp
+	$(CPP) -c ../map.cpp -o Obj/map.o $(CXXFLAGS)
+
+Obj/monster.o: ../monster.cpp
+	$(CPP) -c ../monster.cpp -o Obj/monster.o $(CXXFLAGS)
+
+Obj/monsters.o: ../monsters.cpp
+	$(CPP) -c ../monsters.cpp -o Obj/monsters.o $(CXXFLAGS)
+
+Obj/movement.o: ../movement.cpp
+	$(CPP) -c ../movement.cpp -o Obj/movement.o $(CXXFLAGS)
+
+Obj/networkmessage.o: ../networkmessage.cpp
+	$(CPP) -c ../networkmessage.cpp -o Obj/networkmessage.o $(CXXFLAGS)
+
+Obj/npc.o: ../npc.cpp
+	$(CPP) -c ../npc.cpp -o Obj/npc.o $(CXXFLAGS)
+
+Obj/otpch.o: ../otpch.cpp
+	$(CPP) -c ../otpch.cpp -o Obj/otpch.o $(CXXFLAGS)
+
+Obj/otserv.o: ../otserv.cpp
+	$(CPP) -c ../otserv.cpp -o Obj/otserv.o $(CXXFLAGS)
+
+Obj/outfit.o: ../outfit.cpp
+	$(CPP) -c ../outfit.cpp -o Obj/outfit.o $(CXXFLAGS)
+
+Obj/outputmessage.o: ../outputmessage.cpp
+	$(CPP) -c ../outputmessage.cpp -o Obj/outputmessage.o $(CXXFLAGS)
+
+Obj/party.o: ../party.cpp
+	$(CPP) -c ../party.cpp -o Obj/party.o $(CXXFLAGS)
+
+Obj/player.o: ../player.cpp
+	$(CPP) -c ../player.cpp -o Obj/player.o $(CXXFLAGS)
+
+Obj/playerbox.o: ../playerbox.cpp
+	$(CPP) -c ../playerbox.cpp -o Obj/playerbox.o $(CXXFLAGS)
+
+Obj/position.o: ../position.cpp
+	$(CPP) -c ../position.cpp -o Obj/position.o $(CXXFLAGS)
+
+Obj/protocol.o: ../protocol.cpp
+	$(CPP) -c ../protocol.cpp -o Obj/protocol.o $(CXXFLAGS)
+
+Obj/protocolgame.o: ../protocolgame.cpp
+	$(CPP) -c ../protocolgame.cpp -o Obj/protocolgame.o $(CXXFLAGS)
+
+Obj/protocolhttp.o: ../protocolhttp.cpp
+	$(CPP) -c ../protocolhttp.cpp -o Obj/protocolhttp.o $(CXXFLAGS)
+
+Obj/protocollogin.o: ../protocollogin.cpp
+	$(CPP) -c ../protocollogin.cpp -o Obj/protocollogin.o $(CXXFLAGS)
+
+Obj/protocolold.o: ../protocolold.cpp
+	$(CPP) -c ../protocolold.cpp -o Obj/protocolold.o $(CXXFLAGS)
+
+Obj/quests.o: ../quests.cpp
+	$(CPP) -c ../quests.cpp -o Obj/quests.o $(CXXFLAGS)
+
+Obj/raids.o: ../raids.cpp
+	$(CPP) -c ../raids.cpp -o Obj/raids.o $(CXXFLAGS)
+
+Obj/scheduler.o: ../scheduler.cpp
+	$(CPP) -c ../scheduler.cpp -o Obj/scheduler.o $(CXXFLAGS)
+
+Obj/scriptmanager.o: ../scriptmanager.cpp
+	$(CPP) -c ../scriptmanager.cpp -o Obj/scriptmanager.o $(CXXFLAGS)
+
+Obj/server.o: ../server.cpp
+	$(CPP) -c ../server.cpp -o Obj/server.o $(CXXFLAGS)
+
+Obj/spawn.o: ../spawn.cpp
+	$(CPP) -c ../spawn.cpp -o Obj/spawn.o $(CXXFLAGS)
+
+Obj/spectators.o: ../spectators.cpp
+	$(CPP) -c ../spectators.cpp -o Obj/spectators.o $(CXXFLAGS)
+
+Obj/spells.o: ../spells.cpp
+	$(CPP) -c ../spells.cpp -o Obj/spells.o $(CXXFLAGS)
+
+Obj/status.o: ../status.cpp
+	$(CPP) -c ../status.cpp -o Obj/status.o $(CXXFLAGS)
+
+Obj/talkaction.o: ../talkaction.cpp
+	$(CPP) -c ../talkaction.cpp -o Obj/talkaction.o $(CXXFLAGS)
+
+Obj/teleport.o: ../teleport.cpp
+	$(CPP) -c ../teleport.cpp -o Obj/teleport.o $(CXXFLAGS)
+
+Obj/textlogger.o: ../textlogger.cpp
+	$(CPP) -c ../textlogger.cpp -o Obj/textlogger.o $(CXXFLAGS)
+
+Obj/thing.o: ../thing.cpp
+	$(CPP) -c ../thing.cpp -o Obj/thing.o $(CXXFLAGS)
+
+Obj/tile.o: ../tile.cpp
+	$(CPP) -c ../tile.cpp -o Obj/tile.o $(CXXFLAGS)
+
+Obj/tools.o: ../tools.cpp
+	$(CPP) -c ../tools.cpp -o Obj/tools.o $(CXXFLAGS)
+
+Obj/trashholder.o: ../trashholder.cpp
+	$(CPP) -c ../trashholder.cpp -o Obj/trashholder.o $(CXXFLAGS)
+
+Obj/vocation.o: ../vocation.cpp
+	$(CPP) -c ../vocation.cpp -o Obj/vocation.o $(CXXFLAGS)
+
+Obj/waitlist.o: ../waitlist.cpp
+	$(CPP) -c ../waitlist.cpp -o Obj/waitlist.o $(CXXFLAGS)
+
+Obj/weapons.o: ../weapons.cpp
+	$(CPP) -c ../weapons.cpp -o Obj/weapons.o $(CXXFLAGS)
+
+Obj/TheForgottenServer_private.res: TheForgottenServer_private.rc ../gui_resources.rc 
+	$(WINDRES) -i TheForgottenServer_private.rc --input-format=rc -o Obj/TheForgottenServer_private.res -O coff 
